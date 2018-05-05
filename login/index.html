@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draw & Chat - Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+
+    <div class="button-wrapper">
+      <div class="login-button">Login</div>
+      <div class="register-button">Register</div>
+    </div>
+    <!--
+    <div class="redo-button">
+      <img src="img/redo.png" width="25px" height="25px">
+    </div>
+    -->
+    <form class="login-form" method="">
+      <input type="text" name="username" placeholder="username...">
+      <input type="password" name="password" placeholder="password...">
+    </form>
+
+    <form class="register-form" method="">
+      <input type="email" name="email" placeholder="email...">
+      <input type="text" name="username" placeholder="username...">
+      <input type="password" name="password" placeholder="password...">
+    </form>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        handleClicks();
+      });
+    </script>
+  </body>
+</html>

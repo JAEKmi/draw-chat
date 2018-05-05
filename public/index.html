@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draw & Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jscolor.js"></script>
+    <script src="js/drawingboard.js"></script>
+  </head>
+  <body>
+    <!-- <iframe id="frame" style="width: 250px; display: none;"></iframe> -->
+    <div class="row">
+      <div class="col-10 header header-font"></div>
+      <input list="users" class="col-1 searchbar" placeholder="search" />
+        <datalist id="users"></datalist>
+      <div class="col-1 header-font logout-button">LOGOUT</div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 drawingboard-container">
+          <canvas class="drawingboard" width="1350" height="700"></canvas>
+      </div>
+
+      <div class="col-1 toolbar-container">
+        <div class="toolbar-header header-font">TOOLS</div>
+        <input class="col-12 jscolor colorplate">
+        <select class="col-12 tools">
+            <option value=""></option>
+            <option value="line">line</option>
+            <option value="straightLine">straightLine</option>
+            <option value="eraser">eraser</option>
+            <option value="spray">spray</option>
+        </select>
+        <input class="col-12 brushSize" placeholder="brush size here..."></input>
+      </div>
+
+      <div class="col-1 friendslist-container">
+        <div class="friendslist-header header-font">FRIENDS</div>
+        <div class="friends-container">
+          <ul class="friends-list"></ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 chatwindow-container">
+        <div class="col-12 msg-container">
+          <ul class="messages-list"></ul>
+        </div>
+          <form action="" class="msgForm">
+              <input class="col-12 msg-input" type="text" name="input-message" placeholder="Type something...">
+          </form>
+      </div>
+    </div>
+
+  </body>
+</html>

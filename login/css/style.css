@@ -1,0 +1,173 @@
+* {
+  padding:0;
+  margin: 0l
+}
+
+body {
+  background-color: rgb(241, 232, 186);
+}
+
+.wrongField {
+  border: 2px solid rgb(255, 119, 119);
+}
+.wrongField:focus {
+    border: 2px solid rgb(255, 119, 119);
+}
+
+input {
+  width: 140px;
+  height: 25px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 2.5px;
+  margin-top: 2.5px;
+
+  border: 2px solid #ccc;
+  outline: none;
+  transition: 0.5s;
+  grid-column: 2 / 3;
+}
+
+input:focus {
+    border: 2px solid rgb(127, 128, 130);
+}
+
+.triangle-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+@keyframes swipe-up-login {
+  100% {
+     transform: translateY(-40px);
+  }
+}
+
+.upper-login {
+    animation: swipe-up-login 0.5s ease forwards;
+}
+
+@keyframes swipe-down-login {
+  0% {
+     transform: translateY(-40px);
+     opacity: 1;
+  }
+  100% {
+     transform: translateY(40px);
+     opacity: 0;
+  }
+}
+
+.lower-login {
+  animation: swipe-down-login 0.5s ease forwards;
+
+}
+
+.login-button {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 5px;
+
+  border: 2px solid rgb(127, 128, 130);
+  color: rgb(127, 128, 130);
+  line-height: 30px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes swipe-down-register {
+  100% {
+     transform: translateY(60px);
+  }
+}
+
+.lower-register {
+  animation: swipe-down-register 0.7s ease forwards;
+}
+
+@keyframes swipe-up-register {
+  0% {
+    transform: translateY(60px);
+    opacity: 1;
+  }
+  100% {
+     transform: translateY(-60px);
+     opacity: 0;
+  }
+}
+
+.upper-register {
+  animation: swipe-up-register 0.7s ease forwards;
+}
+
+@keyframes resetRegButton {
+  100% {
+     transform: translateY(-60px);
+  }
+}
+
+.reset-register {
+  animation: resetRegButton 0.5s ease forwards;
+}
+
+.register-button {
+  width: 150px;
+  height: 30px;
+  margin-top: 5px;
+
+  border: 2px solid rgb(127, 128, 130);
+  color: rgb(127, 128, 130);
+  line-height: 30px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button-wrapper{
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.redo-button {
+  width: 25px;
+  height:25px;
+  margin-left: -10px;
+  margin-top: -10px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-100%) translateY(-100%);
+}
+
+form {
+  display: grid;
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 1s ease;
+}
+
+.login-form {
+  opacity: 0;
+  z-index: -1;
+}
+
+.register-form {
+  opacity: 0;
+  z-index: -1;
+}
